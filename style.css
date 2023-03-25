@@ -1,0 +1,402 @@
+@import url('https://fonts.googleapis.com/css2?family=Antonio:wght@200&family=Montserrat:wght@200&family=Sono:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Andika&family=Antonio:wght@200&family=Montserrat:wght@200&family=Sono:wght@300&display=swap');
+
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-align: center;
+}
+body
+{
+    font-family: 'Andika    ', 'Sans-Serif';
+    background-image: url(../img/maths.png);
+    background-size: 250px;
+}
+
+#pencilImg
+{
+    position: fixed;
+    top:-100px;
+}
+
+#actionBtn
+{
+    width: 160px;
+    padding: 10px 0;
+    margin-top: 10px;
+    background-color: rgb(233, 219, 185);
+    border: none;
+    border: radius 20px;;
+    font-family: 'Antonio';
+    font-size: 25px;
+    font-weight: 750;
+    text-align: center;
+}
+
+.school-bus
+{
+    position: absolute;
+    right: 20px;
+    top: 75px;
+    z-index: 1;
+
+}
+
+#mathTeacher
+ {  
+    position:fixed;
+    bottom:0;
+    right: -275px;
+ }
+ 
+ #student
+ {
+    position: fixed;
+    top: 0;
+    left:   10px;
+    transform: rotateY(-180deg);
+    animation: studentOut 3s linear;
+ }
+
+ #chemTeach
+ {
+    position: fixed;
+    bottom: -10px;
+    left: -10px;
+    margin: 0;
+    z-index: 1;
+    transform: rotateY(180deg);
+ }
+
+ .blackboard
+ {
+    width: 300px;
+    height: 250px;
+    background-color: rgb(32, 31, 31);
+    position: fixed;
+    bottom: 200px;
+    right: 700px;
+    border-radius: 10px;
+    border:  8px solid goldenrod;
+
+ }
+
+ h1
+{
+    text-align: center;
+    padding: 40px;
+    color: white;
+    font-size: 2.5rem;
+    font-family: 'Roboto', sans-serif;
+    vertical-align:center;
+}
+h1:nth-child(2)
+{
+    text-align: center;
+    color:yellow;
+    font-size: 1.5rem;
+    font-family: 'Roboto', sans-serif;
+    vertical-align:center;
+}
+
+#minusSymbol
+{
+    position: fixed;
+    top: 50px;
+    right: 250px;
+    /* visibility: hidden; */
+    transform-origin:250% center; 
+    /* animation: operators 5s linear infinite; */
+
+}
+
+#crossedSymbol
+{
+    position: fixed;
+    top: 100px;
+    left: 20px;
+    transform-origin:150% center; 
+}
+
+#massFormula
+{
+position: absolute;
+margin: auto;
+bottom: 500px;
+right: 500px;
+}
+
+#massFormularotate
+{
+    transform: rotateX(360deg);
+    transition: 3s ease-in-out;
+}
+
+#comparisonSymbol
+{
+    position: absolute;
+    top: 500px;
+    left: 20px;
+    transform: rotateX(-180deg);
+    transition: 2s ease-in-out;
+}
+
+#comparisonSymbol2
+{
+    position: absolute;
+    top: 500px;
+    right: 20px;
+    transform: rotateZ(180deg);
+    transition: 2s ease-in-out;
+}
+
+#operators
+{
+
+    position: fixed;
+    top: 505px;
+    /* visibility: hidden; */
+}
+
+.calculator {
+    display: block;
+    position:fixed; 
+    bottom: 250px;
+    left: 250px;
+    background-image: url(/CWD3313/JavaAnimations/img/calculator.png);
+    transform-origin:250% center; 
+}
+
+@keyframes rotateCalculator
+{ 
+    100%
+    {
+        transform:rotate(360deg);
+    } 
+}
+
+@keyframes rotateCrossed
+{ 
+    100%
+    {
+        transform:rotate(-360deg);
+    } 
+}
+
+@keyframes rotateMinus
+{ 
+    100%
+    {
+        transform:rotate(-360deg);
+    } 
+}
+
+@keyframes operators
+{
+    0%
+    {
+        transform: rotateZ(360deg);
+    }
+    50%
+    {
+        transform: rotateZ(-360deg);
+    }
+}
+
+@keyframes busMovement
+{
+    0%
+    {
+        transform: translateX(0px);
+    }
+
+    90%,100%{
+        transform: translateX(calc(100vw + 200px));
+    }
+}
+
+
+#angryTeacher
+{
+    position: absolute;
+    top: 100px;
+    right: 900px;
+    width: 150px;
+}
+
+ 
+    /* .container
+    {
+        display: block;
+        position: fixed;
+        z-index: 0;
+        top: 220px;
+        left: 610px;
+        width: 300px;
+        height: 250px;
+        background-color: antiquewhite;
+    } */
+
+.container2
+{
+    display: block;
+    position: fixed;
+    z-index: 1;
+    bottom: 200px;
+    left: 610px;
+    width: 300px;
+    height: 250px;
+    background-color: rgb(186, 145, 92);
+}
+
+.container3
+{
+    display: block;
+    position: absolute;
+    z-index: 0;
+    top: 220px;
+    right: 700px;
+    width: 300px;
+    height: 250px;
+    background-color: rgb(102, 64, 15);
+}
+
+.containerClock
+{
+    display: block;
+    position: absolute;
+    z-index: 0;
+    bottom: 75px;
+    right: 900px;
+    width: 300px;
+    height: 100px;
+    
+}
+
+#clock
+{
+position: relative;
+display: block;
+width: 100%;
+color: #fff;
+text-align: center;
+padding: 10px;
+margin: 5px;
+font-weight: 700;
+text-transform: uppercase;
+letter-spacing: 0.5em;
+font-size: 0.7em;
+}
+#clock #time
+{
+    display: flex;
+}
+#clock #time div
+{
+    position: relative;
+    margin: 0 5px;
+}
+ 
+#clock #time div span
+{
+    position: relative;
+    display: block;
+    border-radius: 15px;
+    width: 100px;
+    height: 80px;
+    margin: 3px;
+    background:#2196f3;
+    stop-color: #fff;
+    display: flex;
+    justify-content: center;
+    font-size: 4em;
+    z-index: 10;
+    box-shadow: 0 0 0 1px rgba(0,0,0,0.2);
+    text-align: justify;
+    padding: 10px;
+}
+
+#clock #time div span:nth-child(2)
+{
+    height: 30px;
+    font-size: 0.7em;
+    letter-spacing: 0.5em;
+    font-weight: 500;
+    z-index: 9;
+    box-shadow: none;
+    background: #127fd6;
+    text-transform: uppercase;
+    text-align: justify;
+    padding: 10px;
+}
+
+#clock #time div:last-child span
+{
+    background: #ff006a;
+}
+
+#clock #time div:last-child span:nth-child(2)
+{
+    background: #ec0062;
+}
+
+
+
+
+.container {
+    /* max-width: 400px; */
+    display: block;
+    position: fixed;
+    z-index: 1;
+    bottom: 280px;
+    left: 610px;
+    width: 300px;
+    height: 250px;
+    
+}
+
+#display {  
+    text-align: right;
+    height: 30px;
+    width: 305;
+    line-height: 25px;
+    padding: 0px 5px;
+    font-size: 30px;
+    /* background-color: rgb(167, 167, 102);  */
+    border-radius: 10px;
+    margin: 20px 0;
+    border: 1px solid black;
+    background-color: white;
+}
+
+.buttons {
+    display: grid;
+    /* border: 0.5px solid black; */
+    /* border-left: 0.25px solid black; */
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.button {
+    border: 0.5px solid black;
+    background-color: white;
+    border-radius: 50px;
+    line-height: 48px;
+    text-align: center;
+    font-size: 30px;
+    padding: 0 25px;
+    cursor: pointer;
+    margin: 1px;
+}
+
+#equal {
+    background-color: rgb(93, 93, 141);
+    color: white;
+}
+
+.button:hover {
+    background-color: #323330;
+    color: white;
+    transition: 0.25s ease-in-out;
+}
